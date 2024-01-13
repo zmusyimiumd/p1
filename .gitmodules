@@ -1,0 +1,3 @@
+[submodule "web-template"]
+	path = web-template
+	url = https://github.com/cmsc389T-winter2024/web-template
