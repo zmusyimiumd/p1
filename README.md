@@ -88,20 +88,6 @@ docker volume prune
 
 ### Submitting
 
-You will be adding links for your Github Pages Site
-
-Please format your `submission.txt` file as follows for Gradescope:
-
-```
-GitHub_Username
-Repository_Name
-```
-
-e.x. if `sagars729` creates a fork titled `CMSC389T-Web-Template` then the `submission.txt` file would be
-
-```
-sagars729
-CMSC389T-Web-Template
-```
+Once you have completed your project and are ready for your repo to be reviewed, please complete [this](https://forms.gle/yrNP4q1XA3jD7f6E9) google form.
 
 **Note:** There *might* be a problem when trying to view your profile pic when running locally, but if the image is showing up on your Github Pages Site, then that is okay and there are no points deducted for this.
