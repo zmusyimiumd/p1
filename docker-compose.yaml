@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  nodejs:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - app-network
+    depends_on:
+      - webserver
+
+  webserver:
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+    depends_on:
+      - nodejs
+    networks:
+      - app-network
+
+volumes:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/zacharymusyimi/p1/web-template/p1/web-template/p1
+      o: bind
+
+networks:
+  app-network:
+    driver: bridge
